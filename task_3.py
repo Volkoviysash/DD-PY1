@@ -1,7 +1,4 @@
 def delete(list_, index=-1):
-    #Проверка попадания индекса в промежуток
-    if abs(index) >= len(list_):
-        return "Error! list index out of range"
     if index < 0:   #если индекс отрицательный
         index = len(list_) + index; 
     return list_[:index] + list_[index + 1:]
