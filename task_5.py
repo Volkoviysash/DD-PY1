@@ -2,9 +2,13 @@ from string import ascii_uppercase, ascii_lowercase, digits
 from random import sample
 
 
-def get_random_password(n: int = 8) -> str:
-    population = ascii_uppercase + ascii_lowercase + digits #создаcт один лист со всеми возможными символами
-    return ''.join(sample(population, n))
+def get_random_password(length=8, uppercase=True, digits=True):
+    alphabet = string.ascii_lowercase
+    if uppercase:
+        alphabet += string.ascii_uppercase
+    if digits:
+        alphabet += string.digits
+    return ''.join(sample(alphabet, length))
 
 
 print(get_random_password())
