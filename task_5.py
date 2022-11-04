@@ -14,4 +14,4 @@ def get_random_password(length=8, uppercase=True, digits=True):
 print(get_random_password())
 print(get_random_password(13))
 print(get_random_password(1))
-print(get_random_password(0))
+print(get_random_password(0, uppercase=False))
