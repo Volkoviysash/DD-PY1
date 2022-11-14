@@ -2,6 +2,8 @@ import random
 
 
 def get_unique_list_numbers(start=-10, stop=10, size=15) -> list[int]:
+    if size > (stop - start):
+        raise ValueError("Size of array is incorrect!")
     list_ = []
     while len(list_) < size:
         number = random.randint(start, stop)
