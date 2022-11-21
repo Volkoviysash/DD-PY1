@@ -1,4 +1,3 @@
-# import json
 from pprint import pprint
 
 INPUT_FILE = "input.csv"
