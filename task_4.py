@@ -13,8 +13,8 @@ def csv_to_list_dict(filename, delimeter=",", new_line="\n") -> list[dict]:
             yield dict(zip(headers, object_values))
 
 
-def dict_printer(line):
-    pprint([record for record in line])
+def dict_printer(object_):
+    pprint([record for record in object_])
 
 
 dict_printer(csv_to_list_dict(INPUT_FILE))
