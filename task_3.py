@@ -14,12 +14,15 @@ def to_csv_file(filename, headers, rows, delimeter=",", new_line="\n"):
         file.write(delimeter.join(headers) + new_line)
         headers_length = len(headers)
         for row in rows:
-            if len(headers) == len(row): #проверка на то, что значений окажется столько сколько предполагается заголовков
+            if headers_length == len(row): #проверка на то, что значений окажется столько сколько предполагается заголовков
                 file.write(delimeter.join(row) + new_line)
+            else:
+                raise ValueError("Значений больше чем заголовков!")
 
 
 # TODO вызвать функцию to_csv_file и записать данные в файл
 to_csv_file(OUTPUT_FILE, headers_list, data)
+
 
 with open(OUTPUT_FILE) as output_f:
  for line in output_f:
