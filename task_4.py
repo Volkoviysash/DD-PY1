@@ -1,7 +1,6 @@
 from pprint import pprint
 
 INPUT_FILE = "input.csv"
-OUTPUT_FILE = "output.json"
 
 
 def csv_to_list_dict(filename, delimeter=",", new_line="\n") -> list[dict]:
